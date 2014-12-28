@@ -1,0 +1,43 @@
+<section class="curator-cards-container" ng-controller="UsersController" 
+    ng-init="curators(); showDetailsAll=false">
+    <div data-ng-repeat="user in curators" class="curator-card" ng-show="user"
+        ng-model="showDetails" ng-init="showDetails=showDetailsAll"
+        ng-class="{true: 'show-full-info', false: ''}[showDetails]">
+        <section class="curator-preview flex-card">
+            <section class="curator-status flex-vline">
+                <div class="curator-status-decor"></div>
+                <div class="curator-status-sign"
+                    ng-init="img='/img/radio_empty.png'"
+                    ng-mouseover="img = '/img/radio_nan.png'" 
+                    ng-mouseleave="img = '/img/radio_empty.png'">
+                  <img ng-src="{{followed($index) && '/img/radio_full.png' || img }}" 
+                    ng-click="follow($index)" alt="Follow {{user.name}}">
+                </div>
+            </section>
+            <section class="curator-pic curator-content" ng-click="showDetails=!showDetails">
+                <h4 class="with_hint" ng-hide="global.user">{{user.name}}</h4>
+                <h4 class="with_hint" ng-show="global.user">
+                    <a ng-href="#!/users/{{ user._id }}">{{ user.name }}</a>
+                    <span ng-show="user._id == global.user._id">(you)</span>
+                    <a class="the_hint" ng-show="global.user._id == user._id"
+                        href="/#!/users/{{ user._id }}/edit">edit</a>
+                </h4>
+                <img ng-src="{{ picSrc(user.pic, 200, true, 'w') }}" 
+                    ng-show="user.pic">
+            </section>
+            <section class="curator-descr curator-content">
+                <div ng-bind-html-unsafe="user.description"></div>
+            </section>
+        </section>
+        <section ng-show="showDetails" ng-include="'views/curator_details.html'">
+        </section>
+    </div>
+    <footer ng-hide="global.authenticated">
+      <div>
+        <form ng-submit="signUp()" class="flex-line">
+          <input ng-model='email' type="text" placeholder="Type your e-mail"><input type="submit" value="Sign up"/>
+        </form>
+        <p>Select your tiiipsters of choice, enter your e-mail and hit "Sign up" to receive weekly updates</p>
+      </div>
+    </footer>
+</section>

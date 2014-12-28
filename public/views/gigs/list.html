@@ -1,0 +1,20 @@
+<section ng-controller="GigsController" ng-init="find()">
+    <h1 ng-hide="!gigs || gigs.length">No gigs yet. Why don't you 
+        <a href="/#!/gigs/create">create one</a>?</h1>
+    <ul>
+        <li ng-repeat="gig in gigs">
+            <h2>
+                <a ng-href="/#!/gigs/{{gig._id}}">{{gig.title}}</a>
+                <button ng-show="global.user" 
+                    ng-class="global.user && followed() && 'flw-btn-checked' || 'flw-btn'"
+                    title="Follow or unfollow?"
+                    ng-click="follow()">
+            </h2>
+            <div>{{gig.when | date: 'dd.MM HH:mm'}}</div>
+            <div><a href="{{gig.sourceLink}}">Link</a></div>
+            <div ng-show="gig.pic"><img ng-src="{{picSrc(gig.pic, 100)}}"></div>
+            <p>{{gig.geoLocation}}</p>
+            <p>{{gig.description}}</p>
+        </li>
+    </ul>
+</section>

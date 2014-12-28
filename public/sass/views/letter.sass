@@ -1,0 +1,251 @@
+$l_bgcolor: #f9dd27
+$l_border_color: #aaa
+$l_dot_size: 28px
+$l_header_content_top_margin: 13px
+$l_main_right_padding: 80px
+$l_margin: 85px
+
+@import "utils"
+
+@mixin tiny_input
+  input
+    height: 14px
+    outline: none
+    margin: 0
+
+@mixin border_with_icons($diam,$rad)
+  .l_border
+    @include display-flex
+    @include flex-dir(column)
+    width: $l_dot_size
+
+    div
+      border: 1px solid $l_border_color
+      margin: 0 auto
+      width: 0
+      @include flex-grow(1)
+
+    .l_tiii_icon
+      width: $diam
+      height: $diam
+      border-radius: $rad
+      border: 0
+      @include flex-grow(0)
+
+      &.Arty_icon
+        background: #b00
+
+      &.Chick_icon
+        background: #0b0
+      
+      &.Smarty_icon
+        background: #00b
+
+      &.Pick_icon
+        background: #bb0
+
+@mixin border_in_block
+  .l_block
+    @include display-flex
+    @include flex-dir(row)
+    border-bottom: 2px solid $l_border_color
+
+    &.last
+      border-bottom: 0
+
+    @include border_with_icons(18px,9px)
+
+
+
+.letter
+  width: 600px
+  margin: 0 auto
+  background: #eee
+  border: 1px solid #eee
+
+  input
+    margin: 10px 0 0 0
+    width: 30%
+    display: none
+
+  &.edit_mode
+    input
+      display: inline
+
+  .l_header
+    @include display-flex
+    @include flex-dir(row)
+    min-height: 40px
+    background: #fff
+
+    .l_content
+      @include display-flex
+      @include flex-dir(column)
+      min-height: 40px
+      border-top: 2px solid $l_border_color
+      margin-top: $l_header_content_top_margin
+
+      div
+        @include flex-grow(1)
+        background: $l_bgcolor
+        margin-top: 5px
+        padding-bottom: 10px
+
+    .l_margin
+      width: $l_margin
+
+    .l_border
+      @include display-flex
+      @include flex-dir(column)
+      width: $l_dot_size
+      background: $l_bgcolor
+
+      .l_dot
+        height: $l_dot_size
+        background: #f00 /* FIXME */
+        border-radius: 14px
+
+      .l_line
+        @include flex-grow(1)
+        width: 0
+        margin: 0 auto
+        border: 1px solid $l_border_color
+
+
+    .l_main
+      width: 487px 
+      text-align: center
+
+      h2
+        font-size: 2em
+        margin: 0
+        padding: 10px $l_main_right_padding 5px 0
+
+      p
+        margin: 0
+        padding: 0 $l_main_right_padding 0 0
+        
+  .l_warning,
+  .l_greeting,
+  .l_timetable,
+  .l_tiiipsters,
+  .l_our_news
+    background: #fff
+    @include tiny_input
+
+    input
+      width: 300px
+
+  .l_warning
+    font-size: 10px
+    padding: 9px 0
+    text-align: center
+
+  .l_greeting
+    padding: 30px 30px 20px 18px
+    font-size: 16px
+    @include tiny_input
+
+  .l_timetable
+    padding: 0 25px
+
+    .l_day
+      @include display-flex
+      @include flex-dir(row)
+      border-bottom: 2px solid $l_border_color
+
+      &.last
+        border-bottom: 0
+
+      .l_gigs
+        width: 490px
+
+      .l_date
+        width: 60px
+
+        h3
+          font-size: 18px
+          margin: 0
+          line-height: 22px
+          padding-top: 12px
+
+      .l_gig
+        @include display-flex
+        @include flex-dir(row)
+        @include border_with_icons(14px, 7px)
+
+        .l_time
+          padding: 12px
+          width: 40px
+
+        .l_text
+          padding: 12px
+          width: 360px
+
+  .l_tiiipsters
+    padding: 0 25px
+    @include border_in_block
+
+    .l_block
+
+      .l_nothing
+        width: 60px
+
+      .l_main
+        width: 350px
+        padding: 23px 0 12px 12px
+        font-size: 12px
+        @include tiny_input
+
+        input
+          width: 200px
+
+        h3
+          font-size: 1.4em
+          line-height: 1.4em
+          margin: 0
+
+        p
+          margin: 0
+          padding: 0
+          font-size: 12px
+          line-height: 14px
+
+          a
+            text-decoration: none
+            font-weight: 400
+
+            &:hover,
+            &:active
+              text-decoration: underline
+
+      .l_pic
+        width: 100px
+
+        div
+          margin: 33px 15px 33px
+          border-radius: 35px
+          height: 70px
+          width: 70px
+
+        .Arty_pic
+          background: #b00
+
+        .Chick_pic
+          background: #0b0
+
+        .Smarty_pic
+          background: #00b
+
+        .Pick_pic
+          background: #bb0
+
+  .l_our_news
+    padding: 45px 65px 30px 100px
+    font-size: 16px
+
+  .l_footer
+    background: $l_bgcolor
+    font-size: 10px
+    padding: 30px 0
+    text-align: center

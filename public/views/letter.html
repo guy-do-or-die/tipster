@@ -1,0 +1,19 @@
+<section class="letter" ng-model="show_inputs" ng-init="show_inputs=false" ng-class="show_inputs && 'edit_mode' || ''">
+    <button ng-hide="show_inputs" ng-click="show_inputs=true">Show Inputs</button>
+    <button ng-show="show_inputs" ng-click="show_inputs=false">Hide Inputs</button><br>
+    <input ng-show="show_inputs" type="text" ng-model="warning" placeholder="Type the rest in trouble">
+    <section class="l_warning">If you have trouble {{ warning }}</section>
+    <input type="text" ng-model="data.predef" placeholder="Type prefix for all headers">
+    <section ng-include="'views/_letter_header.html'" ng-controller="LetterCtrl1"></section>
+    <section class="l_greeting">Hey there! <input type="text" ng-model="greeting" placeholder="Type the rest"><br>{{greeting}}</section>
+    <section ng-include="'views/_letter_header.html'" ng-controller="LetterCtrl2"></section>
+    <section class="l_timetable" ng-include="'views/_letter_timetable.html'"></section>
+    <section ng-include="'views/_letter_header.html'" ng-controller="LetterCtrl3"></section>
+    <section class="l_tiiipsters" ng-include="'views/_letter_tiiipsters.html'"></section>
+    <section ng-include="'views/_letter_header.html'" ng-controller="LetterCtrl4"></section>
+    <section class="l_our_news">There are {{our_news}} <br>
+        <input type="text" ng-model="our_news" placeholder="Type the rest in Our news">
+    </section>
+    <input type="text" ng-model="footer" placeholder="Type the rest in footer">
+    <section class="l_footer">You're receiving {{footer}}</section>
+</section>

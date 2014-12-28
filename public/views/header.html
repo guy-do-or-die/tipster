@@ -1,0 +1,22 @@
+<div class="navbar-inner header-navbar" data-ng-controller="HeaderController" data-ng-init="init()">
+    <ul class="nav pull-right">
+        <li class=""><a href="#!/about">About</a></li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle"><b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li ng-hide="global.authenticated"><a href="signup">Signup</a></li>
+                <li ng-hide="global.authenticated"><a href="signin">Signin</a></li>
+                <li ng-show="global.authenticated" ng-repeat="item in menu" 
+                  ng-class="{active: isSelected(item)}"><a 
+                    href="#!/{{item.link}}">{{item.title}}</a></li>
+                <li ng-show="global.authenticated"><a href="/signout">Signout</a></li>
+                <li ng-show="global.authenticated"><a 
+                  href="#!/users/{{ global.user._id }}/edit">Edit profile</a></li>
+            </ul>
+        </li>
+    </ul>
+    <ul class="nav pull-center">
+        <li class=""><a href="#!/"><img class="" src="/img/logo_black.png"></a></li>
+    </ul>
+</div>
+<h1 class="curators-header">What's your type?</h1>

@@ -1,0 +1,43 @@
+<section ng-init="search.when_date=''">
+<section class="curator-timeline flex-line">
+    <div class="curator-status flex-vline">
+        <div class="curator-status-decor short"></div>
+        <div class="curator-status-sign"
+            ng-init="img='/img/radio_empty.png'"
+            ng-mouseover="img = '/img/radio_nan.png'"
+            ng-mouseleave="img = '/img/radio_empty.png'">
+            <img ng-src="{{followed($index) && '/img/radio_full.png' || img}}"
+                ng-click="follow($index)" alt="Follow {{user.name}}">
+        </div>
+        <div class="curator-status-decor"></div>
+    </div>
+    <div class="empty-on-purpose anti-hor-line">
+        <div class="date-text"
+            ng-class="search.when_date=='' && 'is-active' || ''"
+            ng-click="search.when_date=''">
+            <h4>All</h4>
+            <div class="tick">
+                <div ng-init="sty={'background-color': user.color || '#6c9f4b', 'border-color': user.border_color || '#2f5a31'}"
+                    ng-style="sty"></div>
+            </div>
+        </div>
+    </div>
+    <div class="date-text" ng-repeat="dat in user.attend_dates"
+        ng-class="search.when_date==dat && 'is-active' || ''"
+        ng-click="search.when_date=dat">
+        <h4>{{dat}}</h4>
+        <div class='tick'>
+            <div ng-init="sty={'background-color': user.color || '#6c9f4b', 'border-color': user.border_color || '#2f5a31'}"
+                ng-style="sty"></div>
+        </div>
+    </div>
+</section>
+<section class="curator-full-info">
+    <div ng-repeat="gig in user.attends | filter:search">
+        <h4 ng-init="sty={'margin-left':gig.when_shift+'px'}" ng-style="sty">
+            <span ng-hide="search.when_date">{{ gig.when_date }} </span>{{gig.when_time}}</h4>
+        <p><a ng-href="#!/gigs/{{gig._id}}">{{gig.title}}</a></p>
+        <p>{{gig.description}} <a ng-href="{{gig.sourceLink}}">Link</a></p>
+    </div>
+</section>
+</section>

@@ -1,0 +1,59 @@
+<section ng-controller="GigsController">
+<form class="form-horizontal" ng-submit="create()">
+
+<!-- Title -->
+<div class="control-group">
+<label class="control-label" for="title">Title</label>
+<div class="controls">
+<input id="title" type="text" ng-model="gig.title" placeholder="Title">
+</div>
+</div>
+
+<!-- Source Link -->
+<div class="control-group">
+<label class="control-label" for="sourceLink">Source Link</label>
+<div class="controls">
+<input id="sourceLink" type="url" ng-model="gig.sourceLink" placeholder="Source Link">
+</div>
+</div>
+
+<!-- Geo Location -->
+<div class="control-group">
+<label class="control-label" for="geoLocation">Geo Location</label>
+<div class="controls">
+<input id="geoLocation" type="text" ng-model="gig.geoLocation" placeholder="Geo Location">
+</div>
+</div>
+
+<!-- Date -->
+<div class="control-group">
+<label class="control-label" for="when">Date</label>
+<div class="controls">
+<input id="when" type="datetime" ng-model="gig.when" placeholder="Date">
+</div>
+</div>
+
+
+<div class="control-group">
+<div class="controls">
+<input class="btn" type="button" ng-click="pickAPic()" value="Upload a pic">
+<img class="img" ng-src="{{picSrc(gig.pic, 30)}}">
+</div>
+</div>
+
+<!-- Description -->
+<div class="control-group">
+<label class="control-label" for="description">Description</label>
+<div class="controls">
+<textarea id="description" rows="5" ng-model="gig.description" placeholder="Description"></textarea>
+</div>
+</div>
+
+<!-- Submit Button -->
+<div class="control-group">
+<div class="controls">
+<input type="submit" class="btn">
+</div>
+</div>
+</form>
+</section>

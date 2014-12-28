@@ -1,0 +1,169 @@
+$logo_height: 93px
+$content_width: 1000px
+$border_color: #2c2f31
+$font_color: #181818
+
+@mixin fixed-top
+  position: fixed
+  top: 0
+  left: 0
+
+body, h1, h2, h3, h4, h5, h6
+  font-family: Raleway, 'Open Sans', Arial, Helvetica, sans-serif 
+  font-weight: 300
+  color: $font_color
+
+ul
+  list-style: none
+
+a
+  color: #333
+  text-decoration: none
+  font-weight: 600
+
+  &:hover
+    color: #666
+    text-decoration: underline
+
+.navbar
+  .nav
+    > li
+      > a.brand
+        padding: 0 20px 5px
+        margin-left: 0
+  .brand
+    padding-top: 5px
+    padding-bottom: 5px
+
+  li.with_brand a
+    padding-top: 0
+    padding-bottom: 0
+
+.navbar-fixed-top
+  @include fixed-top
+
+.navbar-fixed-bottom
+  @include fixed-top
+
+
+.navbar
+  margin: 0
+
+  .navbar-inner
+    background: transparent
+    -webkit-box-shadow: none
+    box-shadow: none
+    border: 0
+    width: $content_width
+    margin: 0 auto
+
+  .nav.pull-center
+    float: none
+    display: block
+    *display: inline /* ie7 fix */
+    *zoom: 1 /* hasLayout ie7 trigger */
+    vertical-align: top
+    margin: 0 auto
+
+    li
+      text-align: center
+      float: none
+    a
+      padding: 0
+      padding-top: 15px
+
+  .nav.pull-right
+    position: absolute
+    top: 0
+    right: 14%
+    left: inherit
+    z-index: 1000
+
+  .nav li.dropdown.open > .dropdown-toggle
+    background: none
+
+.content
+  margin-top: 0
+  width: 100%
+  padding-bottom: 160px
+
+  .container
+    width: $content_width
+
+    form
+      padding: 20px
+
+    footer form
+      padding: 0
+
+.header-navbar
+  margin: 0
+  padding: 0
+  height: $logo_height
+
+  div
+    margin: 0
+    padding: 0
+    height: $logo_height
+
+/* 
+ * Allow angular.js to be loaded in body, hiding cloaked elements until 
+ * templates compile.  The !important is important given that there may be 
+ * other selectors that are more specific or come later and might alter display.  
+ */
+[ng\:cloak], [ng-cloak], .ng-cloak
+  display: none !important
+
+footer
+  position: fixed
+  left: 0px
+  bottom: 0px
+  width: 100%
+  background: #fff
+
+  div
+    width: 620px
+    margin: 44px auto 0
+
+    p
+      white-space: nowrap
+
+  form
+    border: 1px solid $border_color
+    padding: 0
+    margin: 0
+
+    input,
+    input[type=text],
+    input[type=submit]
+      border: 0
+      display: inline-block
+      background-color: transparent
+      border-radius: 0
+      border-shadow: none
+      margin: 0
+
+    input[type=text]
+      -webkit-flex-grow: 1
+      flex-grow: 1
+      border-right: 1px solid $border_color
+
+  p
+    padding: 5px 0
+    margin: 0 0 50px 0
+
+h1
+  margin: 0
+  padding: 5px 15px
+
+.with_hint
+  .the_hint
+    display: none
+    font-size: smaller
+
+  span
+    font-size: smaller
+
+  &:hover
+    .the_hint
+      display: inline

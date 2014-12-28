@@ -1,0 +1,397 @@
+/* line 60, ../../sass/views/letter.sass */
+.letter {
+  width: 600px;
+  margin: 0 auto;
+  background: #eeeeee;
+  border: 1px solid #eeeeee;
+}
+/* line 66, ../../sass/views/letter.sass */
+.letter input {
+  margin: 10px 0 0 0;
+  width: 30%;
+  display: none;
+}
+/* line 72, ../../sass/views/letter.sass */
+.letter.edit_mode input {
+  display: inline;
+}
+/* line 75, ../../sass/views/letter.sass */
+.letter .l_header {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  min-height: 40px;
+  background: white;
+}
+/* line 81, ../../sass/views/letter.sass */
+.letter .l_header .l_content {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  min-height: 40px;
+  border-top: 2px solid #aaaaaa;
+  margin-top: 13px;
+}
+/* line 88, ../../sass/views/letter.sass */
+.letter .l_header .l_content div {
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  background: #f9dd27;
+  margin-top: 5px;
+  padding-bottom: 10px;
+}
+/* line 94, ../../sass/views/letter.sass */
+.letter .l_header .l_margin {
+  width: 85px;
+}
+/* line 97, ../../sass/views/letter.sass */
+.letter .l_header .l_border {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  width: 28px;
+  background: #f9dd27;
+}
+/* line 103, ../../sass/views/letter.sass */
+.letter .l_header .l_border .l_dot {
+  height: 28px;
+  background: red;
+  border-radius: 14px;
+}
+/* line 108, ../../sass/views/letter.sass */
+.letter .l_header .l_border .l_line {
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  width: 0;
+  margin: 0 auto;
+  border: 1px solid #aaaaaa;
+}
+/* line 115, ../../sass/views/letter.sass */
+.letter .l_header .l_main {
+  width: 487px;
+  text-align: center;
+}
+/* line 119, ../../sass/views/letter.sass */
+.letter .l_header .l_main h2 {
+  font-size: 2em;
+  margin: 0;
+  padding: 10px 80px 5px 0;
+}
+/* line 124, ../../sass/views/letter.sass */
+.letter .l_header .l_main p {
+  margin: 0;
+  padding: 0 80px 0 0;
+}
+/* line 128, ../../sass/views/letter.sass */
+.letter .l_warning,
+.letter .l_greeting,
+.letter .l_timetable,
+.letter .l_tiiipsters,
+.letter .l_our_news {
+  background: white;
+}
+/* line 11, ../../sass/views/letter.sass */
+.letter .l_warning input,
+.letter .l_greeting input,
+.letter .l_timetable input,
+.letter .l_tiiipsters input,
+.letter .l_our_news input {
+  height: 14px;
+  outline: none;
+  margin: 0;
+}
+/* line 136, ../../sass/views/letter.sass */
+.letter .l_warning input,
+.letter .l_greeting input,
+.letter .l_timetable input,
+.letter .l_tiiipsters input,
+.letter .l_our_news input {
+  width: 300px;
+}
+/* line 139, ../../sass/views/letter.sass */
+.letter .l_warning {
+  font-size: 10px;
+  padding: 9px 0;
+  text-align: center;
+}
+/* line 144, ../../sass/views/letter.sass */
+.letter .l_greeting {
+  padding: 30px 30px 20px 18px;
+  font-size: 16px;
+}
+/* line 11, ../../sass/views/letter.sass */
+.letter .l_greeting input {
+  height: 14px;
+  outline: none;
+  margin: 0;
+}
+/* line 149, ../../sass/views/letter.sass */
+.letter .l_timetable {
+  padding: 0 25px;
+}
+/* line 152, ../../sass/views/letter.sass */
+.letter .l_timetable .l_day {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  border-bottom: 2px solid #aaaaaa;
+}
+/* line 157, ../../sass/views/letter.sass */
+.letter .l_timetable .l_day.last {
+  border-bottom: 0;
+}
+/* line 160, ../../sass/views/letter.sass */
+.letter .l_timetable .l_day .l_gigs {
+  width: 490px;
+}
+/* line 163, ../../sass/views/letter.sass */
+.letter .l_timetable .l_day .l_date {
+  width: 60px;
+}
+/* line 166, ../../sass/views/letter.sass */
+.letter .l_timetable .l_day .l_date h3 {
+  font-size: 18px;
+  margin: 0;
+  line-height: 22px;
+  padding-top: 12px;
+}
+/* line 172, ../../sass/views/letter.sass */
+.letter .l_timetable .l_day .l_gig {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
+/* line 17, ../../sass/views/letter.sass */
+.letter .l_timetable .l_day .l_gig .l_border {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  width: 28px;
+}
+/* line 22, ../../sass/views/letter.sass */
+.letter .l_timetable .l_day .l_gig .l_border div {
+  border: 1px solid #aaaaaa;
+  margin: 0 auto;
+  width: 0;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+}
+/* line 28, ../../sass/views/letter.sass */
+.letter .l_timetable .l_day .l_gig .l_border .l_tiii_icon {
+  width: 14px;
+  height: 14px;
+  border-radius: 7px;
+  border: 0;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+}
+/* line 35, ../../sass/views/letter.sass */
+.letter .l_timetable .l_day .l_gig .l_border .l_tiii_icon.Arty_icon {
+  background: #bb0000;
+}
+/* line 38, ../../sass/views/letter.sass */
+.letter .l_timetable .l_day .l_gig .l_border .l_tiii_icon.Chick_icon {
+  background: #00bb00;
+}
+/* line 41, ../../sass/views/letter.sass */
+.letter .l_timetable .l_day .l_gig .l_border .l_tiii_icon.Smarty_icon {
+  background: #0000bb;
+}
+/* line 44, ../../sass/views/letter.sass */
+.letter .l_timetable .l_day .l_gig .l_border .l_tiii_icon.Pick_icon {
+  background: #bbbb00;
+}
+/* line 177, ../../sass/views/letter.sass */
+.letter .l_timetable .l_day .l_gig .l_time {
+  padding: 12px;
+  width: 40px;
+}
+/* line 181, ../../sass/views/letter.sass */
+.letter .l_timetable .l_day .l_gig .l_text {
+  padding: 12px;
+  width: 360px;
+}
+/* line 185, ../../sass/views/letter.sass */
+.letter .l_tiiipsters {
+  padding: 0 25px;
+}
+/* line 48, ../../sass/views/letter.sass */
+.letter .l_tiiipsters .l_block {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  border-bottom: 2px solid #aaaaaa;
+}
+/* line 53, ../../sass/views/letter.sass */
+.letter .l_tiiipsters .l_block.last {
+  border-bottom: 0;
+}
+/* line 17, ../../sass/views/letter.sass */
+.letter .l_tiiipsters .l_block .l_border {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  width: 28px;
+}
+/* line 22, ../../sass/views/letter.sass */
+.letter .l_tiiipsters .l_block .l_border div {
+  border: 1px solid #aaaaaa;
+  margin: 0 auto;
+  width: 0;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+}
+/* line 28, ../../sass/views/letter.sass */
+.letter .l_tiiipsters .l_block .l_border .l_tiii_icon {
+  width: 18px;
+  height: 18px;
+  border-radius: 9px;
+  border: 0;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+}
+/* line 35, ../../sass/views/letter.sass */
+.letter .l_tiiipsters .l_block .l_border .l_tiii_icon.Arty_icon {
+  background: #bb0000;
+}
+/* line 38, ../../sass/views/letter.sass */
+.letter .l_tiiipsters .l_block .l_border .l_tiii_icon.Chick_icon {
+  background: #00bb00;
+}
+/* line 41, ../../sass/views/letter.sass */
+.letter .l_tiiipsters .l_block .l_border .l_tiii_icon.Smarty_icon {
+  background: #0000bb;
+}
+/* line 44, ../../sass/views/letter.sass */
+.letter .l_tiiipsters .l_block .l_border .l_tiii_icon.Pick_icon {
+  background: #bbbb00;
+}
+/* line 191, ../../sass/views/letter.sass */
+.letter .l_tiiipsters .l_block .l_nothing {
+  width: 60px;
+}
+/* line 194, ../../sass/views/letter.sass */
+.letter .l_tiiipsters .l_block .l_main {
+  width: 350px;
+  padding: 23px 0 12px 12px;
+  font-size: 12px;
+}
+/* line 11, ../../sass/views/letter.sass */
+.letter .l_tiiipsters .l_block .l_main input {
+  height: 14px;
+  outline: none;
+  margin: 0;
+}
+/* line 200, ../../sass/views/letter.sass */
+.letter .l_tiiipsters .l_block .l_main input {
+  width: 200px;
+}
+/* line 203, ../../sass/views/letter.sass */
+.letter .l_tiiipsters .l_block .l_main h3 {
+  font-size: 1.4em;
+  line-height: 1.4em;
+  margin: 0;
+}
+/* line 208, ../../sass/views/letter.sass */
+.letter .l_tiiipsters .l_block .l_main p {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  line-height: 14px;
+}
+/* line 214, ../../sass/views/letter.sass */
+.letter .l_tiiipsters .l_block .l_main p a {
+  text-decoration: none;
+  font-weight: 400;
+}
+/* line 218, ../../sass/views/letter.sass */
+.letter .l_tiiipsters .l_block .l_main p a:hover, .letter .l_tiiipsters .l_block .l_main p a:active {
+  text-decoration: underline;
+}
+/* line 222, ../../sass/views/letter.sass */
+.letter .l_tiiipsters .l_block .l_pic {
+  width: 100px;
+}
+/* line 225, ../../sass/views/letter.sass */
+.letter .l_tiiipsters .l_block .l_pic div {
+  margin: 33px 15px 33px;
+  border-radius: 35px;
+  height: 70px;
+  width: 70px;
+}
+/* line 231, ../../sass/views/letter.sass */
+.letter .l_tiiipsters .l_block .l_pic .Arty_pic {
+  background: #bb0000;
+}
+/* line 234, ../../sass/views/letter.sass */
+.letter .l_tiiipsters .l_block .l_pic .Chick_pic {
+  background: #00bb00;
+}
+/* line 237, ../../sass/views/letter.sass */
+.letter .l_tiiipsters .l_block .l_pic .Smarty_pic {
+  background: #0000bb;
+}
+/* line 240, ../../sass/views/letter.sass */
+.letter .l_tiiipsters .l_block .l_pic .Pick_pic {
+  background: #bbbb00;
+}
+/* line 243, ../../sass/views/letter.sass */
+.letter .l_our_news {
+  padding: 45px 65px 30px 100px;
+  font-size: 16px;
+}
+/* line 247, ../../sass/views/letter.sass */
+.letter .l_footer {
+  background: #f9dd27;
+  font-size: 10px;
+  padding: 30px 0;
+  text-align: center;
+}

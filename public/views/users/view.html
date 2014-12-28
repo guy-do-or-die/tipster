@@ -1,0 +1,22 @@
+<section ng-controller="UsersController" ng-init="findOne()">
+    <h2>{{user.name}} <a ng-show="global.user && global.user._id == user._id" 
+            href="/#!/users/{{user._id}}/edit">edit</a></h2>
+    <div><img ng-src="{{picSrc(user.pic, 100)}}"></div>
+    <div ng-show="user.attends">
+        <h3>Attends:</h3>
+        <ul>
+            <li ng-repeat="gig in user.attends">
+                <span>{{gig.when | date: 'dd.MM HH:mm'}}</span>
+                <a ng-href="#!/gigs/{{gig._id}}">{{gig.title}}</a>
+            </li>
+        </ul>
+    </div>
+    <div ng-show="user.follows">
+        <h3>Follows:</h3>
+        <ul>
+            <li ng-repeat="usr in user.follows">
+                <a ng-href="#!/users/{{usr._id}}">{{usr.name}}</a>
+            </li>
+        </ul>
+    </div>
+</section>

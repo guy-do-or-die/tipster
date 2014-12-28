@@ -1,0 +1,33 @@
+/* line 5, ../../sass/views/about.sass */
+.about-decor {
+  background: url("/img/radio_empty.png") top left no-repeat;
+  height: 22px;
+  padding: 18px 0 0 40px;
+}
+/* line 10, ../../sass/views/about.sass */
+.about-decor div {
+  border: 1px solid #2c2f31;
+  margin-left: 8px;
+  width: 48%;
+}
+
+/* line 15, ../../sass/views/about.sass */
+.about-content {
+  margin: 8px 0 0 20px;
+  border-left: 2px solid #2c2f31;
+  padding: 8px 0 30px 55px;
+}
+/* line 20, ../../sass/views/about.sass */
+.about-content h1 {
+  color: #181818;
+  font-size: 25px;
+  font-weight: 300;
+  margin: 0;
+  padding: 0 0 20px 0;
+}
+/* line 27, ../../sass/views/about.sass */
+.about-content div {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 22px;
+}

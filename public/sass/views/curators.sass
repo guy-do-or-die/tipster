@@ -1,0 +1,245 @@
+$lines_color: #3a3e40
+$left_line: 103px
+$left_line_bottom_margin: 5px
+$card_height: 200px
+$card_inner_height: 198px
+$card_height_clicked: 400px
+$card_inner_height_clicked: 398px
+$left_line_clicked: 350px
+/* -18px */
+$very_left_padding_pic: 37px
+$very_left_padding_descr: 136px
+$border_color: #2c2f31
+$font_color: #181818
+
+@import "utils"
+
+@mixin text-rotate($deg)
+
+  /* Safari */
+  -webkit-transform: rotate($deg)
+
+  /* Firefox */
+  -moz-transform: rotate($deg)
+
+  /* IE */
+  -ms-transform: rotate($deg)
+
+  /* Opera */
+  -o-transform: rotate($deg)
+
+
+.flex-container
+  padding: 50px 0
+  margin: 0
+  @include display-flex
+  -webkit-flex-flow: column wrap
+  flex-flow: column wrap
+  flex-direction: column
+  -webkit-align-items: center
+  align-items: center
+
+.flex-item
+  width: 80%
+
+.curator-cards-container
+  width: 1000px
+  margin: 0 auto
+
+.flex-line
+  @include display-flex
+  @include flex-dir(row)
+  @include flex-justify(space-between)
+
+  div
+    text-align: left
+    padding: 0
+    margin: 0
+
+
+.flex-vline
+  @include display-flex
+  @include flex-dir(column)
+  @include flex-justify(space-between)
+
+  div
+    text-align: left
+    padding: 0
+    margin: 0
+
+
+.flex-card
+  @include display-flex
+  @include flex-dir(row)
+  @include flex-justify(space-between)
+  -webkit-align-items: stretch
+  align-items: stretch
+
+  section
+    text-align: left
+    padding: 0
+    margin: 0
+
+
+  .curator-pic
+    /* pic is loaded after flex-engine (or smth) calculates sizes */
+    min-width: 200px
+    width: 200px
+    padding: 0 0 0 $very_left_padding_pic
+    height: $card_inner_height
+    overflow: hidden
+    cursor: pointer
+
+    a
+      text-decoration: none
+
+  .curator-descr
+    width: 730px
+    div
+      padding: 10px 20px
+      width: 680px
+
+.curator-preview
+  padding: 5px 0 0 0
+  max-height: $card_height
+  color: #333
+  text-align: left
+  overflow: hidden
+
+  .curator-content
+    border-bottom: 2px solid $lines_color
+
+
+.curators-header
+  text-align: center
+  font-size: 35px
+  padding: 20px 0 50px
+  margin: 0
+  font-weight: 300
+
+.curator-status
+  text-align: center
+
+  .curator-status-decor
+    margin: 0 auto $left_line_bottom_margin
+    border: 1px solid $lines_color
+    padding: 0
+    width: 0
+    min-height: 102px
+    @include flex-grow(1)
+
+  .curator-status-sign
+    img
+      display: block
+
+
+@mixin border-in-full-view
+  border-left: 2px solid $lines_color
+  margin-left: 19px
+
+.curator-card.show-full-info
+  max-height: none
+
+  .curator-curator,
+  .curator-preview,
+  .curator-status-decor,
+  .curator-pic
+    height: auto
+    max-height: none
+
+  .curator-status
+    width: 41px /* crazy image resize ?*/
+    max-width: 41px
+    min-height: 274px
+
+  .curator-preview
+
+    .curator-status-decor
+      margin-bottom: 0
+
+    .curator-status-sign
+      display: none
+
+    .curator-content
+      padding-bottom: 40px
+      border-bottom: 0
+
+  .curator-full-info
+    @include border-in-full-view
+    border-bottom: 2px solid $lines_color
+    padding: 1px 0 20px $very_left_padding_descr
+
+    p
+      margin: 0
+
+    h4
+      margin: 15px 0 0 0
+
+  .curator-timeline
+    @include flex-justify(flex-start)
+    padding: 0
+    background: url(/img/border.png) 0 43px repeat-x
+
+    .anti-hor-line
+      background: url(/img/anti_border.png) 0 43px no-repeat
+
+    .curator-status
+      min-height: 0
+
+    .curator-status-decor
+      min-height: 0
+      margin-bottom: 0
+
+      &.short
+        max-height: 16px
+
+    .curator-status-sign
+      margin-top: 5px
+      margin-bottom: 5px
+
+    label
+      display: inline
+
+    .date-text
+      width: 115px
+      margin-right: 20px
+      cursor: pointer
+      //@include text-rotate(-90deg)
+
+      h4
+        margin: 0
+
+      .tick
+        margin-top: 3px
+        height: 28px
+        margin-bottom: 28px
+        background: url(/img/border.png) 20px 0 repeat-y
+        padding: 12px 0 0 13px
+
+        div
+          border: 2px solid
+          border-radius: 8px
+          height: 12px
+          width: 12px
+          display: none
+
+      &.is-active
+
+        .tick
+          height: 80px
+          margin-bottom: 0
+
+          div
+            display: block
+
+    .empty-on-purpose
+      width: 80px
+      padding-left: 38px
+
+      .date-text
+        width: 80px
+        margin-right: 0
+
+        .tick
+          padding-left: 0
+          background: none

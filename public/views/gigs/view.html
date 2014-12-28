@@ -1,0 +1,23 @@
+<section ng-controller="GigsController" ng-init="findOne()" class="ng-cloak">
+    <h2>{{gig.title}}
+        <a ng-show="global.user && global.user._id == gig.user._id"
+            href="#!/gigs/{{gig._id}}/edit">edit</a>
+        <button
+            ng-class="global.user._id && followed() && 'flw-btn-checked' || 'flw-btn'"
+            ng-hide="user._id == global.user._id"
+            title="Follow or unfollow?"
+            ng-click="follow()">
+    </h2>
+    <div>{{gig.when | date: 'dd.MM HH:mm'}}</div>
+    <div><a href="{{gig.sourceLink}}">Link</a></div>
+    <div>{{gig.geoLocation}}</div>
+    <div>{{gig.description}}</div>
+    <div ng-show="gig.followers && gig.followers.length">
+        <h3>Followers:</h3>
+        <ul>
+            <li ng-repeat="usr in gig.followers">
+                <a ng-href="#!/users/{{usr._id}}">{{usr.name}}</a>
+            </li>
+        </ul>
+    </div>
+</section>

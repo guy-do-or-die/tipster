@@ -1,0 +1,102 @@
+$light_back_color: #7FADE8
+$dark_back_color: #1D508F
+
+@mixin go_bottom($bottom)
+  bottom: $bottom
+  position: fixed
+  width: 100%
+
+
+.promo-list
+  padding: 0
+  margin: 0
+
+  li 
+    float: left
+    width: 300px
+    height: 300px
+    background: #3E7ABB
+    overflow: hidden
+    padding: 10px 20px
+    margin: 0 0 10px 10px
+
+.not-promo-list
+  li
+    float: left
+    width: 200px
+    height: 200px
+
+.clear 
+  clear: both
+
+h1.promo-header 
+  text-align: left
+  color: #fff
+  font-weight: 300
+  cursor: pointer
+  font-size: 2.5em
+  line-height: 1.4em
+
+.promo-nav 
+  @include go_bottom(0)
+
+  .accordion
+    margin: 0
+
+  .accordion-inner 
+    border-top: none
+    max-height: 500px
+    overflow: scroll
+
+  .accordion-toggle
+    padding: 15px
+    color: #fff
+    text-decoration: none
+    font-size: 2em 
+
+  .accordion-group 
+    margin-bottom: 0
+    border: none
+    -webkit-border-radius: 0
+    -moz-border-radius: 0
+    border-radius: 0
+  
+
+.promo-second
+  background: $light_back_color
+
+  h1
+    background: $light_back_color
+
+  li 
+    h2
+      font-size: 1.8em
+
+.promo-third
+  background: $dark_back_color
+
+  h1
+    background: $dark_back_color
+
+  ul
+    margin: 0
+
+.promo-stain
+  margin: 100px auto 0
+  display: block
+
+.promo-curators
+  overflow: scroll
+
+  h1
+    font-weight: 300
+
+.carousel
+  width: 500px
+  margin: 0 auto
+
+.carousel-caption
+  position: relative
+
+.carousel-control
+  text-decoration: none

@@ -1,0 +1,118 @@
+/* line 10, ../../sass/views/index.sass */
+.promo-list {
+  padding: 0;
+  margin: 0;
+}
+/* line 14, ../../sass/views/index.sass */
+.promo-list li {
+  float: left;
+  width: 300px;
+  background: #3e7abb;
+  overflow: hidden;
+  padding: 10px 20px;
+  margin: 0 0 10px 10px;
+}
+
+/* line 23, ../../sass/views/index.sass */
+.clear {
+  clear: both;
+}
+
+/* line 32, ../../sass/views/index.sass */
+h1.promo-header {
+  text-align: left;
+  color: white;
+  font-weight: 300;
+  cursor: pointer;
+  font-size: 2.5em;
+  line-height: 1.4em;
+}
+
+/* line 40, ../../sass/views/index.sass */
+.promo-nav {
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+}
+/* line 43, ../../sass/views/index.sass */
+.promo-nav .accordion {
+  margin: 0;
+}
+/* line 46, ../../sass/views/index.sass */
+.promo-nav .accordion-inner {
+  border-top: none;
+  max-height: 500px;
+  overflow: scroll;
+}
+/* line 51, ../../sass/views/index.sass */
+.promo-nav .accordion-toggle {
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 2em;
+}
+/* line 57, ../../sass/views/index.sass */
+.promo-nav .accordion-group {
+  margin-bottom: 0;
+  border: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+/* line 65, ../../sass/views/index.sass */
+.promo-second {
+  background: #7fade8;
+}
+/* line 68, ../../sass/views/index.sass */
+.promo-second h1 {
+  background: #7fade8;
+}
+/* line 72, ../../sass/views/index.sass */
+.promo-second li h2 {
+  font-size: 1.8em;
+}
+
+/* line 75, ../../sass/views/index.sass */
+.promo-third {
+  background: #1d508f;
+}
+/* line 78, ../../sass/views/index.sass */
+.promo-third h1 {
+  background: #1d508f;
+}
+/* line 81, ../../sass/views/index.sass */
+.promo-third ul {
+  margin: 0;
+}
+
+/* line 84, ../../sass/views/index.sass */
+.promo-stain {
+  margin: 100px auto 0;
+  display: block;
+}
+
+/* line 88, ../../sass/views/index.sass */
+.promo-curators {
+  overflow: scroll;
+}
+/* line 91, ../../sass/views/index.sass */
+.promo-curators h1 {
+  font-weight: 300;
+}
+
+/* line 94, ../../sass/views/index.sass */
+.carousel {
+  width: 500px;
+  margin: 0 auto;
+}
+
+/* line 98, ../../sass/views/index.sass */
+.carousel-caption {
+  position: relative;
+}
+
+/* line 101, ../../sass/views/index.sass */
+.carousel-control {
+  text-decoration: none;
+}

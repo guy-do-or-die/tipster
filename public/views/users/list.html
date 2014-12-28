@@ -1,0 +1,38 @@
+<section ng-controller="UsersController" ng-init="find()" ng-cloak>
+    <ul>
+        <li ng-repeat="user in users" class="with_hint">
+            <h3>
+                <a ng-href="#!/users/{{user._id}}">{{user.name}}</a>
+                <span ng-show="user._id == global.user._id">(you)</span>
+                <a class="the_hint" ng-show="global.user._id == user._id"
+                    ng-href="#!/users/{{user._id}}/edit">edit</a>
+                <button
+                    ng-class="global.user._id && followed() && 'flw-btn-checked' || 'flw-btn'"
+                    ng-hide="user._id == global.user._id"
+                    title="Follow or unfollow?"
+                    ng-click="follow()">
+            </h3>
+
+            <div><img ng-src="{{picSrc(user.pic, 100)}}"></div>
+
+            <div ng-show="user.attends && user.attends.length">
+                <h3>Attends:</h3>
+                <ul>
+                    <li ng-repeat="gig in user.attends">
+                        <span>{{gig.when | date: 'dd.MM HH:mm'}}</span>
+                        <a ng-href="#!/gigs/{{gig._id}}">{{gig.title}}</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div ng-show="user.follows && user.follows.length">
+                <h3>Follows:</h3>
+                <ul>
+                    <li ng-repeat="usr in user.follows">
+                        <a ng-href="#!/gigs/{{usr._id}}">{{usr.name}}</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</section>

@@ -1,0 +1,23 @@
+/* line 4, ../sass/about.sass */
+.about-decor {
+  background: url("/img/radio_empty.png") top left no-repeat;
+  height: 40px;
+}
+/* line 8, ../sass/about.sass */
+.about-decor div {
+  border: 1px solid #2c2f31;
+  margin: 18px 0 0 42px;
+}
+
+/* line 12, ../sass/about.sass */
+.about-content {
+  margin-top: 2px;
+  border-left: 2px solid #2c2f31;
+  padding-left: 55px;
+}
+/* line 17, ../sass/about.sass */
+.about-content h1 {
+  color: #181818;
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,9 @@
+<section ng-controller="AboutController">
+    <div ng-repeat="part in parts">
+        <div class="about-decor"><div></div></div>
+        <div class="about-content">
+            <h1>{{part.title}}</h1>
+            <div ng-bind-html-unsafe="part.content"></div>
+        </div>
+    </div>
+</section>
